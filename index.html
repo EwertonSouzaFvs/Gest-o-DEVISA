@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Avaliação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Avaliação</h1>
+        <form id="formulario">
+            <fieldset>
+                <legend>Informações Iniciais</legend>
+                <div class="row centralizado">
+                    <div class="pergunta pequena">
+                        <label for="ano">Ano</label>
+                        <select id="ano" name="ano" required>
+                            <option value="">Selecione o ano</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
+                    <div class="pergunta pequena">
+                        <label for="quadrimestre">Quadrimestre</label>
+                        <select id="quadrimestre" name="quadrimestre" required>
+                            <option value="">Selecione o quadrimestre</option>
+                            <option value="1">1º Quadrimestre</option>
+                            <option value="2">2º Quadrimestre</option>
+                            <option value="3">3º Quadrimestre</option>
+                        </select>
+                    </div>
+                    <div class="pergunta media">
+                        <label for="servidor">Servidor Avaliado</label>
+                        <input type="text" id="servidor" name="servidor" required>
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <label for="resumo_produtos">Resumo do(s) produto(s)</label>
+                    <textarea id="resumo_produtos" name="resumo_produtos" cols="70" rows="10" required></textarea>
+                </div>
+                <div class="row">
+                    <div class="pergunta">
+                        <label for="cargo_endemias">Cargo</label>
+                        <input type="text" id="cargo_endemias" name="cargo_endemias" required>
+                    </div>
+                    <div class="pergunta">
+                        <label for="horaria_semanal">Horário Semanal</label>
+                        <input type="text" id="horaria_semanal" name="horaria_semanal" required>
+                    </div>
+                    <div class="pergunta">
+                        <label for="valor_incentivo">Valor atual do incentivo</label>
+                        <input type="text" id="valor_incentivo" name="valor_incentivo" required>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row">
+                <div class="pergunta">
+                    <label>Indicação para recebimento do incentivo</label>
+                </div>
+                <div class="pergunta inline-radio">
+                    <input type="radio" id="recebe" name="indicacao_incentivo" value="recebe" required>
+                    <label for="recebe">Recebe</label>
+                    <input type="radio" id="nao_recebe" name="indicacao_incentivo" value="nao_recebe">
+                    <label for="nao_recebe">Não recebe</label>
+                </div>
+            </div>
+            <div class="rotulo">
+                RESULTADO DOS PRODUTOS DO TRIMESTRE ANTERIOR
+            </div>
+            <div class="pergunta">
+                <label for="devolutiva_quadrimestre_anterior">Devolutiva do Quadrimestre Anterior</label>
+                <textarea id="devolutiva_quadrimestre_anterior" name="devolutiva_quadrimestre_anterior" rows="4" required></textarea>
+            </div>
+            <div class="rotulo">
+                AVALIAÇÃO QUALITATIVA
+            </div>
+            <div class="pergunta">
+                <label for="responsabilidades_rotina">Responsabilidades de Rotina do Trabalho</label>
+                <textarea id="responsabilidades_rotina" name="responsabilidades_rotina" rows="4" required></textarea>
+            </div>
+            <div class="rotulo">
+                PRODUTOS A SEREM DESENVOLVIDOS
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <label for="produto1">Produto 1</label>
+                    <textarea id="produto1" name="produto1" rows="4"></textarea>
+                </div>
+                <div class="grid-item">
+                    <label for="resultados_esperados1">Resultados Esperados</label>
+                    <textarea id="resultados_esperados1" name="resultados_esperados1" rows="4"></textarea>
+                </div>
+                <div class="grid-item">
+                    <label for="produto2">Produto 2</label>
+                    <textarea id="produto2" name="produto2" rows="4"></textarea>
+                </div>
+                <div class="grid-item">
+                    <label for="resultados_esperados2">Resultados Esperados</label>
+                    <textarea id="resultados_esperados2" name="resultados_esperados2" rows="4"></textarea>
+                </div>
+                <div class="grid-item">
+                    <label for="produto3">Produto 3</label>
+                    <textarea id="produto3" name="produto3" rows="4"></textarea>
+                </div>
+                <div class="grid-item">
+                    <label for="resultados_esperados3">Resultados Esperados</label>
+                    <textarea id="resultados_esperados3" name="resultados_esperados3" rows="4"></textarea>
+                </div>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
